@@ -2,9 +2,16 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "module": "commonjs",
-    "outDir": "dist",
+    "outDir": "./dist",
     "noEmit": false,
-    "jsx": "react"
+    "jsx": "react",
+    "esModuleInterop": true,
+    "target": "es2017",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
-  "include": ["server/**/*.ts"]
+  "include": ["server/**/*"],
+  "exclude": ["node_modules"]
 }
