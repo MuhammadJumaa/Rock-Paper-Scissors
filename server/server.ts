@@ -1,8 +1,8 @@
-import express from 'express';
-import { createServer } from 'http';
-import { Server } from 'socket.io';
-import path from 'path';
-import cors from 'cors';
+const express = require('express');
+const { createServer } = require('http');
+const { Server } = require('socket.io');
+const cors = require('cors');
+import { Socket } from 'socket.io';
 
 const app = express();
 const httpServer = createServer(app);
@@ -34,7 +34,7 @@ const games: Record<string, Game> = {};
 const players: Record<string, string> = {};
 const playerSockets: Map<string, string> = new Map();
 
-io.on("connection", (socket) => {
+io.on("connection", (socket: Socket) => {
   console.log("User connected:", socket.id);
 
   socket.on("register", (name: string) => {
