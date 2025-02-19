@@ -9,7 +9,8 @@
     "lint": "next lint",
     "server:dev": "nodemon server/server.ts",
     "server:build": "tsc --project tsconfig.server.json",
-    "server:start": "node ./dist/server/server.js",
+    "server:start": "node ./dist/server/server.js", 
+    
     "build:all": "npm run server:build"
   },
   "dependencies": {
